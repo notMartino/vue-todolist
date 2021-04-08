@@ -89,8 +89,13 @@ section #add:active{
     border-bottom: 1px solid transparent;
 }
 
-.todoList li i{
+.todoList li i:not(.fa-frown){
     float: right;
     color: tomato;
     cursor: pointer;
+}
+.todoList li i.fa-frown{
+    color: #001533;
+    margin: 0 10px;
+    text-shadow: none;
 }

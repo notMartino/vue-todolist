@@ -24,24 +24,34 @@
 </head>
 <body>
     <header>
-        <img src="img/logo.png" alt="Boolean Logo">
+        <a href="index.html">
+            <img src="img/logo.png" alt="Boolean Logo">
+        </a>
     </header>
 
     <main id="vue">
         <section>
-            <input type="text" placeholder="New todo">
+            <input type="text" placeholder="New todo" @keyup.enter="addNewTodo" v-model="newTodo">
 
-            <button id="add" @click="prova">
+            <button id="add" @click="addNewTodo">
                 <i class="fas fa-plus"></i>
                 Add
             </button>
         </section>
 
         <section class="todoList">
-            <ul>
-                <li v-for="element in todoList">
+            <ul  v-if="todoList.length > 0">
+                <li v-for="(element, index) in todoList">
                     {{element}}
-                    <i class="fas fa-times"></i>
+                    <i class="fas fa-times" @click="removeTodo(index)"></i>
+                </li>
+                <li v-else>CIAOAOOAOA</li>
+            </ul>
+            <ul v-else>
+                <li>
+                    <i class="far fa-frown"></i>
+                    You've got nothing to do
+                    <i class="far fa-frown"></i>
                 </li>
             </ul>
         </section>
