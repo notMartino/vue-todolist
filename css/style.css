@@ -1,0 +1,96 @@
+/* Propreità generali */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color:#00e165;
+}
+body > *{
+    width: 80%;
+    margin: 0 auto;
+    min-width: 350px;
+    font-family: 'Quicksand', sans-serif;
+}
+
+ul{
+    list-style-type: none;
+}
+
+/* Proprietà header */
+header{
+    text-align: center;
+    padding: 20px;
+    background-color: white;
+    border-bottom: 1px solid #001533;
+    height: 115px;
+}
+header img{
+    width: 300px;
+}
+
+/* Poprietà main */
+main{
+    min-height: calc(100vh - 115px);
+    background-color: white;
+    text-align: center;
+}
+main > section {
+    padding: 30px;
+}
+section input[type="text"]{
+    height: 30px;
+    width: 200px;
+    padding: 0 5px;
+    border: 1px solid #001533;
+    border-radius: 5px;
+    font-size: 20px;
+    font-family: 'Quicksand', sans-serif;
+}
+section #add{
+    display: block;
+    height: 30px;
+    width: 200px;
+    padding: 0 5px;
+    border: 1px solid #001533;
+    border-radius: 5px;
+    font-size: 20px;
+    font-family: 'Quicksand', sans-serif;
+    margin: 20px auto 0;
+    cursor: pointer;
+    outline: none;
+}
+section #add:active{
+    border: 3px solid #00e165;
+}
+
+#add i{
+    font-size: 15px;
+}
+
+.todoList{
+    background-color: #00e06560;
+    margin: 0 80px;
+    border-radius: 20px;
+    font-size: 25px;
+    color: white;
+    /* text-shadow: 1px 1px 0 #001533, -1px 1px 0 #001533, -1px -1px 0 #001533, 1px -1px 0 #001533; */
+    text-shadow: 1px 1px 0 #001533;
+    font-weight: bold;
+}
+
+.todoList li{
+    border-bottom: 1px solid #001533;
+    padding: 10px;
+}
+.todoList li:last-child{
+    border-bottom: 1px solid transparent;
+}
+
+.todoList li i{
+    float: right;
+    color: tomato;
+    cursor: pointer;
+}
